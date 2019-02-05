@@ -15,7 +15,7 @@ def host(request):
 
 def test_system(host):
     assert host.system_info.distribution == 'alpine'
-    assert host.system_info.release.startswith('3.8')
+    assert host.system_info.release.startswith('3.9.')
 
 def test_process(host):
     process = host.process.get(comm='minidlnad')

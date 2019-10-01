@@ -1,17 +1,17 @@
-FROM alpine:3.9
+FROM alpine:latest
 LABEL maintainer="github.com/robertbeal"
 
 RUN apk --no-cache add \
-    curl \
-    inotify-tools \
-    ffmpeg \
-    flac \
-    libvorbis \
-    libexif \
-    libjpeg \
-    libid3tag \
-    minidlna \
-    su-exec \
+  curl \
+  inotify-tools \
+  ffmpeg \
+  flac \
+  libvorbis \
+  libexif \
+  libjpeg \
+  libid3tag \
+  minidlna \
+  su-exec \
   && rm -rf /tmp/* \
   && mkdir /config \
   && touch /config/minidlna.conf

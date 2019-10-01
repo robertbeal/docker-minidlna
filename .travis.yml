@@ -1,14 +1,15 @@
 services: docker
 language: python
 python:
-  - '3.6'
+  - "3.6"
 
 env:
   matrix:
     - ARCH=i386
     - ARCH=amd64
     - ARCH=arm
-    - ARCH=arm64
+    - ARCH=armv7
+    - ARCH=aarch64
 
 install:
   - pip install -r requirements-test.txt
@@ -17,8 +18,8 @@ before_script:
   - ./build.sh $ARCH
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
-script: 
-  - pytest -v test.py 
+script:
+  - pytest -v test.py
   - docker build -t robertbeal/minidlna:$ARCH --file Dockerfile.$ARCH .
   - docker run -d --name=minidlna-$ARCH --health-cmd="curl --fail http://127.0.0.1:8200 || exit 1" --health-interval=5s --health-retries=3 robertbeal/minidlna:$ARCH
   - sleep 15

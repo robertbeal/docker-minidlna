@@ -30,8 +30,8 @@ jobs:
       - name: test
         run: |
           pip install --upgrade pip pipenv
-          pipenv sync --dev
-          pipenv run pytest -v
+          pip install -r requirements-test.txt
+          pytest -v
           docker run -d --name=image-under-test --health-cmd="curl --fail http://127.0.0.1:8200 || exit 1" --health-interval=5s --health-retries=3 image-under-test
           sleep 10
           if [[ -z 'docker ps --filter="name=image-under-test" --filter="health=healthy" -q' ]]; then exit 1; fi

@@ -1,4 +1,4 @@
-FROM alpine:3.15.0
+FROM alpine:3.15
 LABEL maintainer="github.com/robertbeal"
 
 RUN apk --no-cache add \

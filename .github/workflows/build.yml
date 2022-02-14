@@ -56,6 +56,7 @@ jobs:
 
       - name: build
         run: |
+          echo "$(cat version)"
           docker buildx build \
             --push \
             --tag robertbeal/minidlna:latest \

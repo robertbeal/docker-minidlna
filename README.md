@@ -18,6 +18,7 @@ docker run \
     --read-only \
     --tmpfs /tmp:rw,size=10000k \
     --security-opt="no-new-privileges:true" \
+    --volume /etc/localtime:/etc/localtime:ro \
     --volume /home/minidlna:/config:ro \
     --volume /media/storage/videos:/media/videos:ro \
     --volume /media/storage/music:/media/music:ro \

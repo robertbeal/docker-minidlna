@@ -29,7 +29,6 @@ jobs:
           python-version: 3.8
       - name: test
         run: |
-          pip install --upgrade pip pipenv
           pip install -r requirements-test.txt
           pytest -v
           docker run -d --name=image-under-test --health-cmd="curl --fail http://127.0.0.1:8200 || exit 1" --health-interval=5s --health-retries=3 image-under-test

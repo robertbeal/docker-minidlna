@@ -12,7 +12,8 @@ docker run \
     --name=minidlna \
     --init \
     --user $(id minidlna -u):$(id minidlna -g) \
-    --publish 8200:8200/tcp -p 1900:1900/udp \
+    --publish 8200:8200/tcp \
+    --publish 1900:1900/udp \
     --net host \
     --read-only \
     --tmpfs /tmp:rw,size=10000k \

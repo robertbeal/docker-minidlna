@@ -44,7 +44,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: variables
-        run: docker run -it alpine ash -c "apk update > /dev/null && apk search minidlna" | tail -n +1 | head -n 1 | sed 's/minidlna-//' > version
+        run: docker run alpine ash -c "apk update > /dev/null && apk search minidlna" | tail -n +1 | head -n 1 | sed 's/minidlna-//' > version
 
       - name: build dependencies
         uses: crazy-max/ghaction-docker-buildx@v3

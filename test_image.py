@@ -40,7 +40,6 @@ def test_ports(host):
 @pytest.mark.parametrize(
     "package",
     [
-        ("curl"),
         ("inotify-tools"),
         ("ffmpeg"),
         ("flac"),

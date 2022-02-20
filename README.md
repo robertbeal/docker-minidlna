@@ -3,7 +3,6 @@
 [![](https://images.microbadger.com/badges/version/robertbeal/syncthing.svg)](https://microbadger.com/images/robertbeal/syncthing "Get your own version badge on microbadger.com")
 [![](https://img.shields.io/docker/pulls/robertbeal/minidlna.svg)](https://hub.docker.com/r/robertbeal/minidlna/)
 [![](https://img.shields.io/docker/stars/robertbeal/minidlna.svg)](https://hub.docker.com/r/robertbeal/minidlna/)
-[![](https://img.shields.io/docker/automated/robertbeal/minidlna.svg)](https://hub.docker.com/r/robertbeal/minidlna/)
 
 # minidlna
 

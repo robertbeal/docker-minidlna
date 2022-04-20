@@ -6,7 +6,7 @@
 
 # minidlna
 
-Container-ised multi-arch builds of Minidlna using su-exec (for file permissions) that can be run in read-only mode.
+Container-ised multi-arch build of Minidlna using su-exec (for file permissions) that can be run in read-only mode.
 
 ```bash
 docker run \

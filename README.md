@@ -20,11 +20,9 @@ docker run \
     --tmpfs /tmp:rw,size=10000k \
     --security-opt="no-new-privileges:true" \
     --volume /etc/localtime:/etc/localtime:ro \
-    --volume /home/minidlna:/config:ro \
-    --volume /media/storage/videos:/media/videos:ro \
-    --volume /media/storage/music:/media/music:ro \
+    --volume /mnt/media:/media:ro \
     --health-cmd="nc -z 127.0.0.1 8200 || exit 1" \
     --health-interval=5s \
     --health-retries=3 \
-    robertbeal/minidlna -f /config/minidlna.conf -S
+    robertbeal/minidlna -f /media/config/minidlna.conf -S
 ```
